@@ -1,0 +1,33 @@
+@import "@/common/styles/_size";
+@import "@/common/styles/_minxins";
+
+#body {
+  width: 100%;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.page-container {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.page-content {
+  padding-left: var(--page-content-padding);
+  padding-right: var(--page-content-padding);
+  max-width: calc(var(--size-desktop) + var(--page-content-padding) * 2);
+  margin-left: auto;
+  margin-right: auto;
+}

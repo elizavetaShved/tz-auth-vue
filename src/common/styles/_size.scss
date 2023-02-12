@@ -1,0 +1,69 @@
+@use "sass:math";
+// брекпоинты
+$desktop: 1280px;
+$tablet: 1024px;
+$ipad: 768px;
+$mobile: 560px;
+$min: 320px;
+
+// для адаптива, вместо @media
+@mixin for-ds-up {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin for-ds-down {
+  @media screen and (max-width: $desktop - 1) {
+    @content;
+  }
+}
+
+@mixin for-tb-up {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin for-tb-down {
+  @media screen and (max-width: $tablet - 1) {
+    @content;
+  }
+}
+
+
+@mixin for-ip-up {
+  @media screen and (min-width: $ipad) {
+    @content;
+  }
+}
+
+@mixin for-ip-down {
+  @media screen and (max-width: $ipad - 1) {
+    @content;
+  }
+}
+
+@mixin for-mb-up {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin for-mb-down {
+  @media screen and (max-width: $mobile - 1) {
+    @content;
+  }
+}
+
+@mixin for-min-up {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin for-min-down {
+  @media screen and (max-width: $min - 1) {
+    @content;
+  }
+}
