@@ -38,7 +38,9 @@ router.beforeEach((to, from, next) => {
     .then((data) => {
       const defaultPageName = RouterParams.mainPage;
       if (to.name) {
-        const authPage = to.name === RouterParams.authPage;
+        const authPage =
+          to.name === RouterParams.authPage ||
+          to.name === RouterParams.forgotPage;
         const userAuthorized = data?.isAuth;
         // если авторизованный пользователь на Авторизации - редирект на главную
 

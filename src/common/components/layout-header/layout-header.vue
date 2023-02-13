@@ -1,9 +1,9 @@
 <template>
   <header class="header-logo">
     <div class="header-logo__container">
-      <div class="header-logo__logo ibg">
+      <router-link to="/" class="header-logo__logo ibg">
         <icon-logo />
-      </div>
+      </router-link>
     </div>
   </header>
 </template>
@@ -15,3 +15,4 @@ export default {
   components: { IconLogo },
 };
 </script>
+<style scoped lang="scss" src="./style.scss" />

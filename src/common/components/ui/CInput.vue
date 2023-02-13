@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="form-authorization">
     <div class="form-authorization__label">{{ title }}</div>
     <label>
       <field

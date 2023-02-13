@@ -1,0 +1,18 @@
+.header-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 0;
+  background-color: #FFFFFF;
+
+  &__container {
+    max-width: 1385px;
+  }
+
+  &__logo {
+    display: block;
+    width: 144px;
+    height: 20px;
+  }
+}

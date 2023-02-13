@@ -8,7 +8,7 @@
             Enter your credentials to access your account
           </div>
           <vee-form
-            class="authorization__form form-authorization"
+            class="authorization__form"
             v-slot="{ errors }"
             @submit="onSubmit"
           >
@@ -32,7 +32,7 @@
               :isRequired="true"
               :isEmail="true"
             />
-            <router-link to="forgotLink" class="form-authorization__link">
+            <router-link :to="forgotLink" class="form-authorization__link">
               Forgot password?
             </router-link>
             <button type="submit" class="form-authorization__button">
@@ -66,19 +66,19 @@ import { sendAuth } from "@/api/rest/auth";
 export default {
   name: "auth-page",
   components: { IconMainImage, IconDots, VeeForm, CInput },
+  emits: ["loader"],
   data() {
     return {
       form: {
         email: "",
         password: "",
       },
-      isLoading: false,
       forgotLink: RouterParams.forgotPage,
     };
   },
   methods: {
     onSubmit(values) {
-      this.isLoading = true;
+      this.$emit("loader", true);
       const formData = new FormData();
       Object.keys(values).forEach((key) => {
         formData.set(key, values[key]);
@@ -98,7 +98,7 @@ export default {
           }
         })
         .finally(() => {
-          this.isLoading = false;
+          this.$emit("loader", false);
         });
     },
     onSuccess(request) {
@@ -107,9 +107,12 @@ export default {
       this.$router.push({ name: RouterParams.mainPage });
     },
     onError(error) {
-      console.log(22);
       alert(error.errors);
     },
   },
 };
 </script>
+
+<style scoped lang="scss" src="./authorization.scss" />
+<style scoped lang="scss" src="./authorization-main.scss" />
+<style scoped lang="scss" src="../../common/styles/_form-authorization.scss" />

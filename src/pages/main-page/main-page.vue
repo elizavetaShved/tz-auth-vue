@@ -1,6 +1,8 @@
 <template>
-  <h1>Страница для авторизованного пользователя</h1>
-  <button @click="logout" class="btn">Выход</button>
+  <section class="page-content">
+    <h1>Страница для авторизованного пользователя</h1>
+    <button @click="logout" class="test-btn">Выход</button>
+  </section>
 </template>
 
 <script>
@@ -16,11 +18,3 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
-.btn {
-  padding: 6px 20px;
-  background-color: #b9b9b9;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-</style>

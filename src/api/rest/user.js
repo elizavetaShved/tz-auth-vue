@@ -5,6 +5,6 @@ export const getUser = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ isAuth: !!localStorage.getItem("token") });
-    }, 500);
+    });
   });
 };

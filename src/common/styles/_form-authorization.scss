@@ -1,0 +1,139 @@
+.form-authorization {
+  label {
+    position: relative;
+    display: block;
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+    color: #1F2937;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+    color: #2A86FF;
+    transition: opacity 0.3s ease 0s;
+
+    &:hover {
+      @media (any-hover: hover) {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #1F2937;
+    font-weight: 400;
+    line-height: 157%;
+
+    &::placeholder {
+      font-size: 14px;
+      color: #9CA3AF;
+      font-weight: 400;
+      line-height: 157%;
+    }
+  }
+
+  &__input_error {
+    background-color: #FDF2F2;
+    border: 1px solid #DC2626;
+  }
+
+  &__form-password-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  &__form-password-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__form-password-btn-content {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 2px;
+      left: -2px;
+      width: 30px;
+      height: 1px;
+      transform: rotate(150deg);
+      background-color: #000;
+      opacity: 0;
+      transition: opacity 250ms;
+    }
+
+    &--hide {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__error-text {
+    margin-top: 2.5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #DC2626;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 9px 0;
+    background-color: #2A86FF;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+    color: #ffffff;
+    transition: opacity 0.3s ease 0s;
+
+    &:hover {
+      @media (any-hover: hover) {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__block {
+    position: absolute;
+    z-index: 1;
+    left: -70%;
+    top: -85%;
+
+    @media (max-width: 991.98px) {
+      top: -195px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 260px;
+    }
+  }
+}
