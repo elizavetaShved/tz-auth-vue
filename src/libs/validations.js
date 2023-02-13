@@ -1,25 +1,25 @@
 const validationsRequired = (value) => {
   if (!value) {
-    return "Обязательно для заполнения";
+    return "Required to fill in";
   }
 };
 
 const validationsEmail = (value) => {
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   if (!regex.test(value)) {
-    return "Недействительный адрес почты";
+    return "Invalid email format";
   }
 };
 
 const validationsMinLength = (value, min) => {
   if (value.length < min) {
-    return `Не менее ${min} символов`;
+    return `At least ${min} characters`;
   }
 };
 
 const validationsMaxLength = (value, max) => {
   if (value.length > max) {
-    return `Не более ${max} символов`;
+    return `Maximum of ${max} characters`;
   }
 };
 

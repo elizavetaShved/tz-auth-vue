@@ -1,18 +1,18 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: import.meta.env.VITE_API, //todo
+  baseURL: import.meta.env.VITE_API,
 });
 
-export function makeRequest(
+export const makeRequest = ({
   url,
   method = "get",
   data = {},
   headers = {
     Accept: "application/json",
     "Content-Type": "application/json",
-  }
-) {
+  },
+}) => {
   const token = localStorage.getItem("token");
   if (token) {
     headers.Authorization = `Bearer ${token}`;
@@ -22,4 +22,4 @@ export function makeRequest(
       return res.data;
     })
     .catch((error) => error);
-}
+};

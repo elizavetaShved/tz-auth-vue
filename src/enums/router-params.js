@@ -1,3 +1,5 @@
 export const RouterParams = {
-  mainPage: "/",
+  mainPage: "main",
+  authPage: "auth",
+  forgotPage: "forgot",
 };
